@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patent Expiration Date Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patent Expiration Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Patent Expiration Date Calculator</h1>
+      <p id="description">
+        This tool helps you to find the expiration date of US patents filed on
+        or after June 8, 1995
+      </p>
+    </header>
+    <fieldset>
+      <label for="earliest-effective-filing-date"
+        >Earliest effective filing date:
+        <input
+          type="date"
+          onclick="event.preventDefault()"
+          id="earliest-effective-filing-date"
+          name="earliest-effective-filing-date"
+          required
+      /></label>
+      <label for="patent-term-adjustment"
+        >Patent term adjustment:
+        <input
+          type="number"
+          id="patent-term-adjustment"
+          name="patent-term-adjustment"
+          placeholder="(days)"
+      /></label>
+      <button onclick="expirationDate()">Calculate</button>
+    </fieldset>
+    <div>
+      <p id="result-text"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
