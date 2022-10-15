@@ -8,7 +8,7 @@ function expirationDate() {
     let newDate = new Date(date.setFullYear(date.getFullYear() + 20));
 
     document.querySelector("#result-text").innerText =
-      "Expiration Date: " + newDate.toLocaleDateString();
+      "Expiration Date (MM/DD//YYY): " + newDate.toLocaleDateString();
 
     if (newDate >= new Date()) {
       resultColor.style.color = "green";
@@ -19,7 +19,7 @@ function expirationDate() {
     let ptaDate = new Date(date.setDate(date.getDate() + parseInt(pta)));
     let finalDate = new Date(ptaDate.setFullYear(ptaDate.getFullYear() + 20));
     document.querySelector("#result-text").innerText =
-      "Expiration Date: " + finalDate.toLocaleDateString();
+      "Expiration Date (MM/DD//YYY): " + finalDate.toLocaleDateString("en-US");
     if (finalDate >= new Date()) {
       resultColor.style.color = "green";
     } else {
